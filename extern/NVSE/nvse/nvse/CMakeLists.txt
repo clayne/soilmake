@@ -51,7 +51,7 @@ add_library(nvse STATIC "${NVSE_HEADERS}" "${NVSE_SOURCES}")
 target_include_directories(nvse PRIVATE "${PROJECT_SOURCE_DIR}/nvse")
 
 if ("${BUILD_ALGOHOL}")
-    message("-- Got BUILD_ALGOHOL, linking NVSE with Algohol")
+    message(STATUS "Got BUILD_ALGOHOL, linking NVSE with Algohol")
 
     target_link_libraries(nvse PUBLIC Algohol)
 endif ()
