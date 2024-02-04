@@ -1,6 +1,4 @@
 set(PLUGIN_HEADERS
-        ./fn_intro_to_script_functions.h
-        ./fn_typed_functions.h
 )
 
 set(PLUGIN_SOURCES
@@ -17,4 +15,8 @@ target_link_libraries("${PROJECT_NAME}" PRIVATE nvse)
 
 target_compile_options("${PROJECT_NAME}" PRIVATE
         /FI "nvse/prefix.h"
+)
+
+add_custom_command(TARGET "${PROJECT_NAME}" POST_BUILD
+        COMMAND "${CMAKE_COMMAND}" -E copy $<TARGET_FILE:${PROJECT_NAME}> "$ENV{FalloutNVPath}/Data/NVSE/Plugins"
 )
