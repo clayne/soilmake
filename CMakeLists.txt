@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.26.4)
 set(BUILD_ALGOHOL ON CACHE INTERNAL "Should Algohol be built?" FORCE)
 
 project(
-        insanity
+        soilmake
         LANGUAGES CXX
         VERSION 1
 )
